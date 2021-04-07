@@ -5,8 +5,6 @@
 <title>Idea pazzerella</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js' type='text/javascript'></script>
-    <link href="https://prod.mangomobi.com/juicews/resources/styles/smartbanner.css" rel="stylesheet" type="text/css" />
 </head>
 <style>
     body {
@@ -20,8 +18,7 @@
     }
 </style>
 <body>
-<iframe height="0" id="loader" style="display:none" width="0"></iframe> <!-- For App Banner -->
-<div id="banner"></div> <!-- For App Banner -->
+
       <img type="button" class="villa w-75 h-auto" data-toggle="modal" data-target=".bd-example-modal-lg" src="mappatouch.png">
 
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -41,33 +38,5 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-      <script type='text/javascript'>
-          var mobileExp = /android|avantgo|blackberry|blazer|compal|elaine|fennec|hiptop|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile|o2|opera mini|palm( os)?|plucker|pocket|pre\/|psp|smartphone|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce; (iemobile|ppc)|xiino/i;
-          if(/Android/i.test(navigator.userAgent)){
-              jQuery(function(){
-                  var banner = '<div id="smartbanner" class="android" style="position:absolute !important;"><div class="sb-container"><a href="#" class="sb-close">&times;</a><span class="sb-icon"></span><div class="sb-info"><strong>Cesena Cresce</strong><span>MANGO MOBILE SOLUTIONS</span></div><a id="target" href="#" class="sb-button"><span>VAI</span></a></div></div>';
-                  jQuery('#banner').append(banner);
-                  jQuery('#smartbanner .sb-icon').css('background-image','url(https://prod.mangomobi.com/juice/images/applications/CODICE_APP/resources/logo_icon.png)');
-                  jQuery( '#smartbanner').css('position', 'relative');
-                  jQuery( '#smartbanner .sb-close').live('click',  function(){
-                      jQuery( '#smartbanner').hide();
-                  });
-                  jQuery( '#target' ).live( 'click', function(){
-                      var clicked = +new Date, timeout = 1000;
-                      document.getElementById('loader').src = 'juice-cesenacresce://prod.mangomobi.com/juicews/socialCardByPk?item_pk=0'+window.location.search+window.location.hash;
-                      setTimeout(function(){
-                          // If we're still here after a (timeout), let the user install it
-                          if (+new Date - clicked < timeout*2){
-                              window.location.replace('https://play.google.com/store/apps/details?id=com.mangomobi.cesenacresce');
-                          } else {
-                              console.log('too late for google play');
-                          }
-                      }, timeout);
-                  });
-              });
-          }
-      </script>
-
-
 </body>
 </html>
